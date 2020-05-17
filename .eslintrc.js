@@ -1,0 +1,96 @@
+module.exports = {
+  "root": true,
+  "extends": [
+    "@react-native-community",
+    "eslint-config-prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "prettier/prettier": 0,
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "never",
+        "objects": "never",
+        "imports": "never",
+        "exports": "never",
+        "functions": "never"
+      }
+    ],
+    "comma-spacing": [
+      "warn",
+      {
+        "before": false,
+        "after": true
+      }
+    ],
+    "eol-last": [
+      "error",
+      "always"
+    ],
+    "indent": [
+      "error",
+      2,
+      { "SwitchCase": 1 }
+    ],
+    "jsx-quotes": [
+      "error",
+      "prefer-double"
+    ],
+    "key-spacing": [
+      "error",
+      {
+        "beforeColon": false,
+        "afterColon": true
+      }
+    ],
+    "no-console": [ "warn" ],
+    "no-debugger": [ "warn" ],
+    "no-extra-boolean-cast": [ "error" ],
+    "no-mixed-spaces-and-tabs": [ "error" ],
+    "no-multi-spaces": [ "error" ],
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 2,
+
+        "maxEOF": 1
+      }
+    ],
+    "no-redeclare": [ "warn" ],
+    "no-return-assign": [
+      "error",
+      "always"
+    ],
+    "no-trailing-spaces": [ "error" ],
+    "no-unused-vars": [
+      "error",
+      {
+        "ignoreRestSiblings": true,
+        "caughtErrors": "all"
+      }
+    ],
+    "no-var": [ "warn" ],
+    "semi": [
+      "error",
+      "never"
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "space-in-parens": [
+      "error",
+      "always"
+    ],
+    "react/jsx-curly-spacing": [
+      "error",
+      {
+        "when": "always",
+        "children": true
+      }
+    ],
+    "react/prop-types": [ "off" ]
+  }
+};

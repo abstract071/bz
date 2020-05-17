@@ -1,28 +1,26 @@
+import 'react-native-gesture-handler'
 import React from 'react'
 import {
   SafeAreaView,
   StatusBar
 } from 'react-native'
+import { NavigationContainer } from '@react-navigation/native'
 
-import CompanyInfo from './src/components/CompanyInfo'
+import TabNavigator from './src/TabNavigator'
 
+import data from './data.json'
 
-declare const global: { HermesInternal: null | {} }
 
 const App: React.FC = () => {
   return (
-    <>
+    <NavigationContainer>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView style={ { flex: 1 } }>
-        <CompanyInfo
-          info={ {
-            name: 'Tesla',
-            logo: '',
-            description: ''
-          } }
+        <TabNavigator
+          data={ data }
         />
       </SafeAreaView>
-    </>
+    </NavigationContainer>
   )
 }
 

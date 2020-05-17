@@ -9,26 +9,28 @@ import {
 import styles from './styles'
 
 
-declare const global: { HermesInternal: null | {} }
-
 interface ICompany {
+  id: number
   name: string
   logo: string
   description: string
 }
 
 interface ICompanyInfoProps {
-  info: ICompany
+  route: {
+    params: ICompany
+  }
 }
 
 const CompanyInfo: React.FC<ICompanyInfoProps> = ( {
-  info: {
-    name,
-    logo,
-    description
+  route: {
+    params: {
+      name,
+      description
+    }
   }
 } ) => {
-  console.log( name, logo, description )
+  console.log( name )
 
   return (
     <ScrollView
@@ -48,9 +50,7 @@ const CompanyInfo: React.FC<ICompanyInfoProps> = ( {
       </View>
       <View style={ styles.descriptionView }>
         <Text style={ styles.description }>
-          Tesla, Inc. (formerly Tesla Motors, Inc.), is an American electric vehicle and clean energy company based in Palo Alto,
-          California. The company specializes in electric vehicle manufacturing, battery energy storage from home to grid scale and,
-          through its acquisition of SolarCity, solar panel and solar roof tile manufacturing.
+          { description }
         </Text>
       </View>
     </ScrollView>

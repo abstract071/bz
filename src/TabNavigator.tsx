@@ -1,7 +1,7 @@
 import React from 'react'
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs'
 
-import CompanyInfo from './components/CompanyInfo'
+import Company from './components/Company'
 
 
 const Tab = createMaterialTopTabNavigator()
@@ -27,7 +27,7 @@ const TabNavigator: React.FC<ITabNavigatorProps> = ( {
           <Tab.Screen
             key={ company.id }
             name={ company.name }
-            component={ CompanyInfo }
+            component={ Company }
             initialParams={ company }
           />
         ) )

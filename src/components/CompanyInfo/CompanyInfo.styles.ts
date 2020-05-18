@@ -3,12 +3,11 @@ import { Colors } from 'react-native/Libraries/NewAppScreen'
 
 
 const styles = StyleSheet.create( {
-  scrollView: {
+  rootView: {
     backgroundColor: Colors.lighter
   },
   nameView: {
-    paddingTop: 20,
-    paddingBottom: 10
+    paddingVertical: 10
   },
   name: {
     textAlign: 'center',
@@ -40,10 +39,9 @@ const styles = StyleSheet.create( {
     height: 100
   },
   descriptionView: {
-    // backgroundColor: Colors.white
+    paddingVertical: 12
   },
   description: {
-    padding: 12,
     fontSize: 18,
     fontWeight: '300',
     letterSpacing: 2,

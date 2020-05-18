@@ -1,41 +1,25 @@
 import React from 'react'
 import {
-  ScrollView,
   View,
   Text,
   Image
 } from 'react-native'
 
-import styles from './styles'
+import styles from './CompanyInfo.styles'
 
 
-interface ICompany {
-  id: number
+interface ICompanyInfoProps {
   name: string
-  logo: string
   description: string
 }
 
-interface ICompanyInfoProps {
-  route: {
-    params: ICompany
-  }
-}
-
 const CompanyInfo: React.FC<ICompanyInfoProps> = ( {
-  route: {
-    params: {
-      name,
-      description
-    }
-  }
+  name,
+  description
 } ) => {
-  console.log( name )
-
   return (
-    <ScrollView
-      contentInsetAdjustmentBehavior="automatic"
-      style={ styles.scrollView }
+    <View
+      style={ styles.rootView }
     >
       <View style={ styles.nameView }>
         <Text style={ styles.name }>{ name }</Text>
@@ -53,7 +37,7 @@ const CompanyInfo: React.FC<ICompanyInfoProps> = ( {
           { description }
         </Text>
       </View>
-    </ScrollView>
+    </View>
   )
 }
 
